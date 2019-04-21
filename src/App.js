@@ -27,15 +27,28 @@ class App extends Component {
           <button onClick={() => this.handleOnClickUsers()}>
             Click to change user count
           </button>
-          <p>{this.props.items.length}</p>
       </div>
     );
-  }
 }
+}
+/* <p>{this.props.items.length}</p> */
+
+// const vanilla = (milkshake) => {
+//   debugger;
+//   return { items: milkshake.items }
+// }
+ 
+// export default connect(vanilla)(App);
+
+
+// export default connect( state => ({ items: state.items }) )(App);
+
+
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+//   debugger;
+//   return { items: state.items }
+    return { orangePeel: state.items };
 }
 
 export default connect(mapStateToProps)(App);
